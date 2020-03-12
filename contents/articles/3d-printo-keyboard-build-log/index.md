@@ -1,7 +1,7 @@
 ---
 title: 3dPrinto Keyboard
 author: nikolai
-date: 2020-3-1
+date: 2020-3-1T00:00:00
 template: article.pug
 ---
 3dPrinto is the name affectionately given to my totally 3d printed keyboard project. I'm not so sure I really like the name, but I ended up calling my 3d printer "Printy" after waffling on what to call it for a while, so Printo seemed like the natural progression...
@@ -27,20 +27,20 @@ Initially, I went about modelling and printing the case in what I now think was 
 Anyway, in my first few attempts, I basically used my 3d printer to mimic a laser cutter. I turned the 2d drawings into uniform thickness, flat pieces, and printed them one by one. Here's a picture of just the bottom of the case (below the plate) as a result of that process:
 ![bottom layers][bunchalayers]
 
-You can see the bottom layer, with all the stand-offs screwed in front and center and then two other layers (split into two pieces each thanks to 3d printing size limits) just above it. This was difficult to assemble, had a lot of potential errors, since any mistake in tolerance was multiplied by the number of parts, and didn't look great, and wasn't super stable. Unfortunately, I was stuck on the whole sandwich case thinking until nearly the end of the project.
+You can see the bottom layer, with all the stand-offs screwed in, and then two other layers (split into two pieces each thanks to 3d printing size limits) just above it. This was difficult to assemble, had a lot of potential errors, since any mistake in tolerance was multiplied by the number of parts, and didn't look great, and wasn't super stable. Unfortunately, I was stuck on the whole sandwich case thinking until nearly the end of the project.
 
 Initially, most of my design changes focused on getting the window in just the right place, lining up all the stand-off holes, making sure the switches fit properly into the plate, making sure the USB port was in the right place, making sure there were clearances for wiring and such where there needed to be, and other such "small" chores. 
 
 The next big design hurdle was deciding how to have a removable cord. At first, I was going to simply let the cord permanently sit in the case, plugged in forever, with a "free-floating" micro-controller, as is the case with a lot of janky hand-wired builds. But, eventually I realized you can buy little breadboard PCBs on Amazon for roughly $1 each, and so that became my strategy. This also meant I could mount my OLED screen directly to the bread-board, and wouldn't need to model a custom stand/holder for it. I tested out several iterations of how everything would fit, moving stand-offs around to accomodate the screen...
 ![test fit 1][test1]
 
-I ended up going with having the screen in the bottom left corner. It required some stand-off modification, which wasn't ideal, but it looked nice, and it allowed the resistors to be visible instead of hidden underneat the PCB, and visibility of components was a goal of the build. At this point, I had done some very rough test fits, but I still wasn't sure (at all) that everything worked. I wired up the OLED wrongly, and set about trying to debut it in software for hours. Those of you who have memorized the pinout for the elite C will notice that pin B1 is neither SCL nor SDA. Those honors belong to pins D0 and D1, both on the left side of the board...
+I ended up going with having the screen in the bottom left corner. It required some stand-off modification, which wasn't ideal, but it looked nice, and it allowed the resistors to be visible instead of hidden underneat the PCB, and visibility of components was a goal of the build. At this point, I had done some very rough test fits, but I still wasn't sure (at all) that everything worked. I wired up the OLED wrongly, and set about trying to debug it in software for hours. Those of you who have memorized the pinout for the elite C will notice that pin B1 is neither SCL nor SDA. Those honors belong to pins D0 and D1, both on the left side of the board...
 ![wrong pins][pins]
 
 After an irritating amount of struggling with the software (despite having it correct on attempt #1), I realized my wiring mistake, and was able to correct it!
 ![Hello World][hw]
 
-With a probably working case (I still hadn't at this point test fit the entire thing), and a definitel working OLED screen, I set out to start wiring the keyboard.
+With a probably working case (I still hadn't at this point test fit the entire thing), and a definitely working OLED screen, I set out to start wiring the keyboard.
 
 ## Modding the swithces
 
@@ -76,7 +76,7 @@ The keycaps were $25 on Amazon, and chosen to go with the black aesthetic. The f
   <source src="20200305_203632.mp4" type="video/mp4">
 </video>
 
-Overall, I'm really happy with how the board as a whole turned out. If you watch the [sound test][yt_sound], you'll see that the spacebar is a little scratchy. This is mostly due to the cheap keycaps coming with a bent spacebar. Other than that, the only other major problem the board has is that because the 3d printer can't print a perfectly sharp edge (round nozzle), the keycaps aren't held in place super firmly. They'll never come out during normal use, but if you're pulling caps, it's definitely a concern. Since the board is hand-wired, repairs in that situation would be annoyingly difficult. Other than that, the board is way sturdier than I ever thought it could be. With the 4 stand-offs under the main key section, there is basically no flex. I'd compare it to an aluminum plate in terms of lack of flex, though not at all in terms of sound profile. Without the standoffs, I think the spacebar would flex fairly dramatically, as it has a large hole to make room for the stabilizers.
+Overall, I'm really happy with how the board as a whole turned out. If you watch the [sound test][yt_sound], you'll see that the spacebar is a little scratchy. This is mostly due to the cheap keycaps coming with a bent spacebar. Other than that, the only other major problem the board has is that because the 3d printer can't print a perfectly sharp edge (round nozzle), the switches aren't held in place super firmly. They'll never come out during normal use, but if you're pulling caps, it's definitely a concern. Since the board is hand-wired, repairs in that situation would be annoyingly difficult. Other than that, the board is way sturdier than I ever thought it could be. With the 4 stand-offs under the main key section, there is basically no flex. I'd compare it to an aluminum plate in terms of lack of flex, though not at all in terms of sound profile. Without the standoffs, I think the spacebar would flex fairly dramatically, as it has a large hole to make room for the stabilizers.
 
 The OLED screen might be a bit too far in the corner, it's a bit difficult to see the bottom row of text if your keyboard is forward on your desk. If I was going to do it again, I think I'd try to figure out a way to put the screen in the upper left corner. If you have any questions, feel free to hit me up on reddit, under the username purxiz, or on github, under the same. Thanks for reading! 
 
@@ -93,7 +93,7 @@ The OLED screen might be a bit too far in the corner, it's a bit difficult to se
 * a couple resistors for the OLED screen, same as above
 * Wire and Solder, same as above
 * Generic black PBT Keycaps, $25 on Amazon
-* 3d printed case, pricess (roughly $5 in Filament).
+* 3d printed case, priceless (roughly $5 in Filament).
 
 With a couple bucks allocated for the solder and wires, that brings the total cost to $96.25, just under the target price point.
 
