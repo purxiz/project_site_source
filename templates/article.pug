@@ -7,12 +7,18 @@ block append vars
 block prepend title
   | #{ page.title + ' - '}
 
+block back_button
+  div.back
+    a(href=contents.index.url) &laquo; Back Home
+
 block header
   include author
   h1= page.title
   p.author
     | #{ 'Written by ' }
     +author(page.metadata.author)
+    span &nbsp;on 
+      span.smaller #{ moment.utc(page.metadata.date).format('DD. MMMM YYYY') }
 
 block content
   article.article
@@ -20,4 +26,4 @@ block content
 
 block prepend footer
   div.nav
-    a(href=contents.index.url) &laquo; Full blog
+    a(href=contents.index.url) &laquo; Back Home

@@ -1,9 +1,9 @@
 {
   "locals": {
-    "url": "http://localhost:4040",
-    "name": "The Wintersmith's blog",
-    "owner": "Someone",
-    "description": "Ramblings of an immor(t)al demigod"
+    "url": "http://projects.sniko.club",
+    "name": "Projects and Ramblings",
+    "owner": "Nikolai",
+    "description": "A collection of spare-time activities"
   },
   "plugins": [
     "./plugins/paginator.coffee"

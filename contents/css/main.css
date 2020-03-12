@@ -5,14 +5,14 @@ h1, h2, h3, h4, h5, h6, p, body, a, img, ul, ol, blockquote, pre {
 
 body {
   font-family: 'Lora', serif;
-  font-size: 21px;
+  font-size: 16px;
   line-height: 1.52;
   background-color: #f8f8f8;
   text-rendering: optimizeLegibility;
 }
 
 .content-wrap {
-  width: 34em;
+  width: 40em;
   margin: 0 auto;
 }
 
@@ -81,10 +81,21 @@ hr {
   margin: 1.6em 0;
 }
 
+/* back button above header */
+
+.back {
+  padding: 0.5em 0 0 1em;
+  font-size: 0.8em;
+  text-decoration: none;
+  position: absolute;
+  top: 0;
+  
+}
+
 /* page header */
 
 .header {
-  margin: 3em 0 5em;
+  margin: 2.5em 0 5em;
 }
 
 .header h1 {
@@ -107,6 +118,10 @@ hr {
   text-align: center;
   font-weight: 400;
   letter-spacing: 1px;
+}
+
+.header .smaller {
+  font-size: 20px;
 }
 
 .header .description {
@@ -384,7 +399,7 @@ code.lang-markdown .bullet {
 /* media queries */
 
 @media (min-width: 1600px) {
-  body { font-size: 26px; }
+  body { font-size: 22px; }
 }
 
 @media (max-width: 900px) {
